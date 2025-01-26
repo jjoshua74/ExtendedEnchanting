@@ -24,6 +24,7 @@ public class ExtendedEnchanting
 {
     // Define mod id in a common place for everything to reference
     //TEST COMMENT
+    // Test this is a comment from Josh
     public static final String MOD_ID = "extended_enchanting";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
