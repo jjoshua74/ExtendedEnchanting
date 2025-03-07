@@ -1,6 +1,6 @@
-package net.poople.extendedEnchanting;
+package net.poople.extended_enchanting;
 
-import net.poople.extendedEnchanting.block.ModBlocks;
+import net.poople.extended_enchanting.block.ModBlocks;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.poople.extended_enchanting.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -27,6 +28,8 @@ public class ExtendedEnchanting
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+
+        ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
